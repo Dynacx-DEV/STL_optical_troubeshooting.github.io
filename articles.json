@@ -3,6 +3,7 @@
 "id":1,
 "title":"High attenuation",
 "category":"Optical",
+"subcategory":"Fiber",
 
 "tags":["fiber","optical","attenuation"],
 
@@ -28,6 +29,7 @@
 "id":2,
 "title":"SFP not detected",
 "category":"Optical",
+"subcategory":"Fiber",
 
 "tags":["sfp","transceiver","layer1"],
 
@@ -51,7 +53,8 @@
 {
 "id":3,
 "title":"High attenuation",
-"category":"Optical",
+"category":"Optical2",
+"subcategory":"Fiber",
 
 "tags":["fiber","optical","attenuation"],
 
@@ -82,4 +85,5 @@
 
 }
 ]
+
 
