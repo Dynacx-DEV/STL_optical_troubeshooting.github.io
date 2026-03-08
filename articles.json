@@ -32,4 +32,43 @@
 ]
 
 }
+
+{
+"id":2,
+"title":"SFP not detected",
+"category":"Optical",
+
+"tags":["sfp","transceiver","layer1"],
+
+"problem":"Switch does not detect inserted SFP module",
+
+"symptoms":[
+"Interface down",
+"SFP not present message",
+"Port LED off"
+],
+
+"diagnostics":[
+"Check compatibility list",
+"Verify switch logs",
+"Try another SFP module"
+],
+
+"resolution":[
+"Use compatible SFP",
+"Update firmware",
+"Replace faulty module"
+],
+
+"images":[
+"assets/images/sfp-module.jpg"
+],
+
+"diagrams":[
+"assets/diagrams/sfp-port.png"
 ]
+
+}
+  
+]
+
