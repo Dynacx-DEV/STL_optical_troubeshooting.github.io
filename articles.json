@@ -5,7 +5,7 @@
 "file":"pages/welcome.html"
 },
 {
-"title":"Falha de comunicação PLC",
+"title":"Falha comunicação PLC",
 "category":"Automação",
 "file":"pages/exemplo-troubleshooting.html"
 }
