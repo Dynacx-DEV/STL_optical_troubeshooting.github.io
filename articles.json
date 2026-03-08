@@ -21,17 +21,8 @@
 "resolution":[
 "Clean fiber connector",
 "Replace patch cable"
-],
-
-"images":[
-"assets/images/fiber-clean.jpg"
-],
-
-"diagrams":[
-"assets/diagrams/fiber-path.png"
 ]
-
-}
+},
 
 {
 "id":2,
@@ -44,31 +35,17 @@
 
 "symptoms":[
 "Interface down",
-"SFP not present message",
-"Port LED off"
+"SFP not present message"
 ],
 
 "diagnostics":[
 "Check compatibility list",
-"Verify switch logs",
-"Try another SFP module"
+"Verify switch logs"
 ],
 
 "resolution":[
 "Use compatible SFP",
-"Update firmware",
 "Replace faulty module"
-],
-
-"images":[
-"assets/images/sfp-module.jpg"
-],
-
-"diagrams":[
-"assets/diagrams/sfp-port.png"
 ]
-
 }
-  
 ]
-
