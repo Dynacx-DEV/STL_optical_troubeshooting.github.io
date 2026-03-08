@@ -1,20 +1,14 @@
-let USERS = JSON.parse(localStorage.getItem("USERS")) || [
+const USERS = [
 
 {
-username:"jose",
-password:"jose123",
+username:"admin",
+password:"admin123",
 role:"admin"
 },
 
 {
-username:"leitor",
-password:"1974a",
-role:"viewer"
-}
-
-  {
-username:"jose.goes",
-password:"Pandora@1",
+username:"reader",
+password:"reader123",
 role:"viewer"
 }
 
