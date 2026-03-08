@@ -5,7 +5,6 @@ fetch("articles.json")
 .then(data=>{
 
 window.articles=data
-
 buildMenu(data)
 
 })
@@ -13,7 +12,6 @@ buildMenu(data)
 function buildMenu(data){
 
 let menu=document.getElementById("menu")
-
 menu.innerHTML=""
 
 let categories={}
@@ -22,102 +20,90 @@ data.forEach(a=>{
 
 if(!categories[a.category]){
 
-categories[a.category]=[]
+categories[a.category]={}
 
 }
 
-categories[a.category].push(a)
+if(!categories[a.category][a.subcategory]){
+
+categories[a.category][a.subcategory]=[]
+
+}
+
+categories[a.category][a.subcategory].push(a)
 
 })
 
 for(let cat in categories){
 
-let h=document.createElement("h3")
+let catDiv=document.createElement("div")
+catDiv.innerHTML="<b>"+cat+"</b>"
+catDiv.style.cursor="pointer"
 
-h.innerText=cat
+let subContainer=document.createElement("div")
+subContainer.style.marginLeft="15px"
+subContainer.style.display="none"
 
-menu.appendChild(h)
+catDiv.onclick=()=>{
 
-categories[cat].forEach(a=>{
-
-let div=document.createElement("div")
-
-div.innerText=a.title
-
-div.onclick=()=>showArticle(a)
-
-menu.appendChild(div)
-
-})
+subContainer.style.display =
+subContainer.style.display=="none"?"block":"none"
 
 }
 
-}
+menu.appendChild(catDiv)
 
-function showArticle(a){
+for(let sub in categories[cat]){
 
-let html=""
+let subDiv=document.createElement("div")
+subDiv.innerHTML="<i>"+sub+"</i>"
+subDiv.style.marginLeft="10px"
 
-html+=`<h2>${a.title}</h2>`
+let artContainer=document.createElement("div")
+artContainer.style.marginLeft="15px"
 
-html+=`<p><b>Problem:</b> ${a.problem}</p>`
+subContainer.appendChild(subDiv)
 
-html+="<h3>Symptoms</h3>"
+categories[cat][sub].forEach(a=>{
 
-a.symptoms.forEach(s=>{
+let art=document.createElement("div")
 
-html+=`<li>${s}</li>`
+art.innerText=a.title
 
-})
+art.onclick=()=>showArticle(a)
 
-html+="<h3>Diagnostics</h3>"
-
-a.diagnostics.forEach(s=>{
-
-html+=`<li>${s}</li>`
-
-})
-
-html+="<h3>Resolution</h3>"
-
-a.resolution.forEach(s=>{
-
-html+=`<li>${s}</li>`
+artContainer.appendChild(art)
 
 })
 
-html+="<h3>Tags</h3>"
-
-a.tags.forEach(t=>{
-
-html+=`<span class="tag">${t}</span>`
-
-})
-
-if(a.images){
-
-html+="<h3>Images</h3>"
-
-a.images.forEach(i=>{
-
-html+=`<img src="${i}" width="400">`
-
-})
+subContainer.appendChild(artContainer)
 
 }
 
-if(a.diagrams){
-
-html+="<h3>Diagrams</h3>"
-
-a.diagrams.forEach(i=>{
-
-html+=`<img src="${i}" width="500">`
-
-})
+menu.appendChild(subContainer)
 
 }
 
-document.getElementById("article").innerHTML=html
 
+function openImage(src){
+
+let overlay=document.createElement("div")
+
+overlay.style.position="fixed"
+overlay.style.top="0"
+overlay.style.left="0"
+overlay.style.width="100%"
+overlay.style.height="100%"
+overlay.style.background="rgba(0,0,0,0.8)"
+overlay.style.display="flex"
+overlay.style.alignItems="center"
+overlay.style.justifyContent="center"
+
+overlay.innerHTML=`<img src="${src}" style="max-width:90%;max-height:90%">`
+
+overlay.onclick=()=>overlay.remove()
+
+document.body.appendChild(overlay)
+
+}
 }
