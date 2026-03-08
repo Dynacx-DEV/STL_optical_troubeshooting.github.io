@@ -1,6 +1,6 @@
 function checkSession(){
 
-if(!localStorage.getItem("sessionUser")){
+if(!localStorage.getItem("user")){
 
 window.location.href="index.html"
 
