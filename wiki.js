@@ -19,6 +19,7 @@ for(let c in cats){
 
 let h=document.createElement("h3")
 h.innerText=c
+
 menu.appendChild(h)
 
 cats[c].forEach(a=>{
