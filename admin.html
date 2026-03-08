@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Admin - Criar Usuário</h1>
+
+<input id="newuser" placeholder="Usuário">
+<input id="newpass" placeholder="Senha">
+
+<select id="role">
+<option value="viewer">Leitura</option>
+<option value="admin">Admin</option>
+</select>
+
+<button onclick="createUser()">Criar Usuário</button>
+
+<script src="js/hash.js"></script>
+<script src="js/users.js"></script>
+<script src="js/permissions.js"></script>
+
+<script>
+
+checkAdmin()
+
+async function createUser(){
+
+let u=document.getElementById("newuser").value
+let p=document.getElementById("newpass").value
+let r=document.getElementById("role").value
+
+let hash=await hashPassword(p)
+
+USERS.push({
+username:u,
+password:hash,
+role:r
+})
+
+localStorage.setItem("USERS",JSON.stringify(USERS))
+
+alert("Usuário criado")
+
+}
+
+</script>
+
+</body>
+</html>
