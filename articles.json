@@ -1,13 +1,11 @@
 [
 {
-"title":"Bem vindo",
-"category":"Geral",
-"file":"welcome.html"
+"title":"Fiber link down",
+"content":"<h3>Symptoms</h3><p>No optical signal</p><h3>Action</h3><p>Check SFP and fiber polarity</p>"
 },
+
 {
-"title":"Falha comunicação PLC",
-"category":"Automação",
-"file":"exemplo-troubleshooting.html"
+"title":"High attenuation",
+"content":"<h3>Symptoms</h3><p>Packet loss</p><h3>Action</h3><p>Clean connectors</p>"
 }
 ]
-
