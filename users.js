@@ -8,7 +8,7 @@ role:"admin"
 
 {
 username:"leitor",
-password:"3e2e4e0f3f7c0e2d0d7d6b9a6e2e5a41",
+password:"1974a",
 role:"viewer"
 }
 
@@ -19,5 +19,6 @@ role:"viewer"
 }
 
 ]
+
 
 
