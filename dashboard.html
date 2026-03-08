@@ -2,53 +2,37 @@
 <html>
 
 <head>
+
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<div class="layout">
+<script src="js/session.js"></script>
 
-<div class="sidebar">
+<script>
+checkSession()
+</script>
 
-<h2>Troubleshooting Wiki</h2>
+<h1>Wiki Troubleshooting</h1>
 
-<input id="search" class="search" placeholder="Buscar">
+<p>Login realizado com sucesso</p>
 
-<div id="menu"></div>
-
-<hr>
-
-<a class="admin" href="editor.html">Novo artigo</a>
-<a class="admin" href="admin.html">Admin</a>
+<p id="userDisplay"></p>
 
 <button onclick="logout()">Logout</button>
 
-</div>
-
-<div class="content">
-
-<h1>Base de Conhecimento</h1>
-<p>Selecione um artigo no menu lateral.</p>
-
-</div>
-
-</div>
-
-<script src="session.js"></script>
-<script src="wiki.js"></script>
-<script src="search.js"></script>
-<script src="permissions.js"></script>
-
 <script>
 
-checkSession()
-showAdminFeatures()
-loadWiki()
+document.getElementById("userDisplay").innerText =
+"Usuário: " + localStorage.getItem("sessionUser")
 
 </script>
 
 </body>
-</html>
 
+</html>
