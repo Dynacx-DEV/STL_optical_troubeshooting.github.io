@@ -1,18 +1,19 @@
+
 [
 {
 "id":1,
-"title":"High attenuation",
-"category":"Optical",
-"subcategory":"Fiber",
+"title":"Vibração na Borda - Edge Vibration",
+"category":"Cosmetic",
+"subcategory":"Blocking",
 
-"tags":["fiber","attenuation","layer1"],
+"tags":["Edge Vibration","Blocking","PRA"],
 
-"problem":"High attenuation detected in optical fiber link",
+"problem":"Seleçao errada de anéis -> diâmetro de suporte da liga de alloy muito pequeno",
 
 "symptoms":[
-"Packet loss",
-"High CRC errors",
-"Low optical power"
+"marca na borda da lente",
+"trepidação"
+
 ],
 
 "diagnostics":[
@@ -22,29 +23,29 @@
 ],
 
 "resolution":[
-"Clean fiber connectors",
-"Replace damaged patch cable"
+"Verifique o tiquete de trabalho"
+
 ],
 
 "images":[
-"fiber-clean.jpg"
+"cosmetc_1.jpg"
 ],
 
 "diagrams":[
-"bot.png"
+""
 ]
 
 },
 
 {
 "id":2,
-"title":"SFP not detected",
+"title":"Ponto no centro - Center dot",
 "category":"Optical",
-"subcategory":"Transceivers",
+"subcategory":"Generating",
 
-"tags":["sfp","transceiver","layer1"],
+"tags":["Generating","center dot"],
 
-"problem":"Switch does not detect inserted SFP module",
+"problem":"center dot",
 
 "symptoms":[
 "Interface down",
@@ -53,23 +54,32 @@
 ],
 
 "diagnostics":[
-"Check compatibility list",
-"Verify switch logs",
-"Test with another SFP"
+"Wrong Y (nipple) calibration",
+"Fine cut tool worn R2 or R5 1800-2000 lenses",
+"Wrong position of the spray nozzle",
+"Default C axis on HSC101",
+"Coolant temperature different between calibration and generation",
+"Wrong Y (nipple) calibration",
+"Pre-cutting tool worn R8 4X-15000 lenses"
 ],
 
 "resolution":[
-"Use supported SFP module",
-"Upgrade switch firmware",
-"Replace faulty SFP"
+"Re-calibrate the fine tool",
+"Replace with new or re-sharp one",
+"Redirect the coolant nozzle",
+"Requires machine supplier intervention or maintenance",
+"Re-do the calibration",
+"Re-calibrate the precutting tool",
+"Replace with new or re-sharp one"
+
 ],
 
 "images":[
-"sfp-module.jpg"
+"cosmetic_2.jpg"
 ],
 
 "diagrams":[
-"sfp-port.png"
+"cosmetc_3.jpg"
 ]
 
 }
