@@ -1,18 +1,16 @@
-async function login(){
+function login(){
 
-let u=document.getElementById("user").value
-let p=document.getElementById("pass").value
+let u = document.getElementById("user").value
+let p = document.getElementById("pass").value
 
-let hash=await hashPassword(p)
-
-let user=USERS.find(x=>x.username===u && x.password===hash)
+let user = USERS.find(x => x.username === u && x.password === p)
 
 if(user){
 
 localStorage.setItem("sessionUser",u)
 localStorage.setItem("sessionRole",user.role)
 
-window.location="dashboard.html"
+window.location = "dashboard.html"
 
 }else{
 
