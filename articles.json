@@ -5,74 +5,25 @@
 "category":"Optical",
 "subcategory":"Fiber",
 
-"tags":["fiber","optical","attenuation"],
+"tags":["fiber","attenuation","layer1"],
 
-"problem":"High attenuation in optical link",
-
-"symptoms":[
-"Packet loss",
-"High CRC errors"
-],
-
-"diagnostics":[
-"Check optical power",
-"Inspect connectors"
-],
-
-"resolution":[
-"Clean fiber connector",
-"Replace patch cable"
-]
-},
-
-{
-"id":2,
-"title":"SFP not detected",
-"category":"Optical",
-"subcategory":"Fiber",
-
-"tags":["sfp","transceiver","layer1"],
-
-"problem":"Switch does not detect inserted SFP module",
-
-"symptoms":[
-"Interface down",
-"SFP not present message"
-],
-
-"diagnostics":[
-"Check compatibility list",
-"Verify switch logs"
-],
-
-"resolution":[
-"Use compatible SFP",
-"Replace faulty module"
-]
-},
-{
-"id":3,
-"title":"High attenuation",
-"category":"Optical2",
-"subcategory":"Fiber",
-
-"tags":["fiber","optical","attenuation"],
-
-"problem":"High attenuation in optical link",
+"problem":"High attenuation detected in optical fiber link",
 
 "symptoms":[
 "Packet loss",
-"High CRC errors"
+"High CRC errors",
+"Low optical power"
 ],
 
 "diagnostics":[
-"Check optical power",
-"Inspect connectors"
+"Check optical power levels",
+"Inspect fiber connectors",
+"Verify fiber polarity"
 ],
 
 "resolution":[
-"Clean fiber connector",
-"Replace patch cable"
+"Clean fiber connectors",
+"Replace damaged patch cable"
 ],
 
 "images":[
@@ -83,7 +34,43 @@
 "fiber-path.png"
 ]
 
-}
+},
+
+{
+"id":2,
+"title":"SFP not detected",
+"category":"Optical",
+"subcategory":"Transceivers",
+
+"tags":["sfp","transceiver","layer1"],
+
+"problem":"Switch does not detect inserted SFP module",
+
+"symptoms":[
+"Interface down",
+"SFP not present message",
+"Port LED off"
+],
+
+"diagnostics":[
+"Check compatibility list",
+"Verify switch logs",
+"Test with another SFP"
+],
+
+"resolution":[
+"Use supported SFP module",
+"Upgrade switch firmware",
+"Replace faulty SFP"
+],
+
+"images":[
+"sfp-module.jpg"
+],
+
+"diagrams":[
+"sfp-port.png"
 ]
 
-
+}
+]
