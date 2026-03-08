@@ -17,18 +17,18 @@
 ],
 
 "diagnostics":[
-"Check optical power levels",
-"Inspect fiber connectors",
-"Verify fiber polarity"
+"confirme o anel no workticket"
+
 ],
 
 "resolution":[
-"Verifique o tiquete de trabalho"
+"Verifique o anel do workticket",
+  "abra um chamado para analise do ticket"
 
 ],
 
 "images":[
-"cosmetc_1.jpg"
+"cosmetic_1.jpg"
 ],
 
 "diagrams":[
@@ -79,10 +79,11 @@
 ],
 
 "images":[
-"cosmetc_3.jpg"
+"cosmetic_3.jpg"
 ]
 
 }
 ]
+
 
 
