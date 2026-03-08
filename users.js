@@ -13,12 +13,13 @@ role:"viewer"
 }
 
   {
-username:"jose;goes",
+username:"jose.goes",
 password:"Pandora@1",
 role:"viewer"
 }
 
 ]
+
 
 
 
