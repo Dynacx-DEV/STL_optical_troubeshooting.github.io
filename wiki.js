@@ -1,38 +1,29 @@
-async function loadWiki(){
+fetch("articles.json")
 
-let r=await fetch("data/articles.json")
-let data=await r.json()
+.then(r=>r.json())
+
+.then(data=>{
 
 let menu=document.getElementById("menu")
 
-let cats={}
+data.forEach(article=>{
 
-data.forEach(a=>{
+let div=document.createElement("div")
 
-if(!cats[a.category])cats[a.category]=[]
+div.innerText=article.title
 
-cats[a.category].push(a)
+div.onclick=()=>showArticle(article)
 
-})
-
-for(let c in cats){
-
-let h=document.createElement("h3")
-h.innerText=c
-
-menu.appendChild(h)
-
-cats[c].forEach(a=>{
-
-let link=document.createElement("a")
-
-link.href=a.file
-link.innerText=a.title
-
-menu.appendChild(link)
+menu.appendChild(div)
 
 })
 
-}
+})
+
+function showArticle(article){
+
+document.getElementById("title").innerText=article.title
+
+document.getElementById("article").innerHTML=article.content
 
 }
