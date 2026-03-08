@@ -47,5 +47,39 @@
 "Use compatible SFP",
 "Replace faulty module"
 ]
+},
+{
+"id":3,
+"title":"High attenuation",
+"category":"Optical",
+
+"tags":["fiber","optical","attenuation"],
+
+"problem":"High attenuation in optical link",
+
+"symptoms":[
+"Packet loss",
+"High CRC errors"
+],
+
+"diagnostics":[
+"Check optical power",
+"Inspect connectors"
+],
+
+"resolution":[
+"Clean fiber connector",
+"Replace patch cable"
+],
+
+"images":[
+"fiber-clean.jpg"
+],
+
+"diagrams":[
+"fiber-path.png"
+]
+
 }
 ]
+
