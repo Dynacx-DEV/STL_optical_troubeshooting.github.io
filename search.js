@@ -1,18 +1,22 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.getElementById("search")
 
-let input=document.getElementById("search")
+.addEventListener("keyup",function(){
 
-input.addEventListener("keyup",()=>{
+let term=this.value.toLowerCase()
 
-let f=input.value.toLowerCase()
+let items=document.querySelectorAll("#menu div")
 
-document.querySelectorAll(".sidebar a").forEach(a=>{
+items.forEach(i=>{
 
-a.style.display =
-a.innerText.toLowerCase().includes(f)
-? "block" : "none"
+if(i.innerText.toLowerCase().includes(term)){
 
-})
+i.style.display="block"
+
+}else{
+
+i.style.display="none"
+
+}
 
 })
 
