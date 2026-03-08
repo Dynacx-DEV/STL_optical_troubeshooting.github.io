@@ -2,20 +2,21 @@ const USERS=[
 
 {
 username:"admin",
-password:"admin123",
+password:"admin@1974",
 role:"admin"
 },
 
 {
 username:"editor",
-password:"editor123",
+password:"editor@123",
 role:"editor"
 },
 
 {
-username:"reader",
-password:"reader123",
+username:"jose.goes",
+password:"read_1245",
 role:"reader"
 }
 
 ]
+
