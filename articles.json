@@ -1,11 +1,35 @@
 [
 {
-"title":"Fiber link down",
-"content":"<h3>Symptoms</h3><p>No optical signal</p><h3>Action</h3><p>Check SFP and fiber polarity</p>"
-},
-
-{
+"id":1,
 "title":"High attenuation",
-"content":"<h3>Symptoms</h3><p>Packet loss</p><h3>Action</h3><p>Clean connectors</p>"
+"category":"Optical",
+
+"tags":["fiber","optical","attenuation"],
+
+"problem":"High attenuation in optical link",
+
+"symptoms":[
+"Packet loss",
+"High CRC errors"
+],
+
+"diagnostics":[
+"Check optical power",
+"Inspect connectors"
+],
+
+"resolution":[
+"Clean fiber connector",
+"Replace patch cable"
+],
+
+"images":[
+"assets/images/fiber-clean.jpg"
+],
+
+"diagrams":[
+"assets/diagrams/fiber-path.png"
+]
+
 }
 ]
