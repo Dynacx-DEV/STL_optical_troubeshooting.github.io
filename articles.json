@@ -2,11 +2,12 @@
 {
 "title":"Bem vindo",
 "category":"Geral",
-"file":"pages/welcome.html"
+"file":"welcome.html"
 },
 {
 "title":"Falha comunicação PLC",
 "category":"Automação",
-"file":"pages/exemplo-troubleshooting.html"
+"file":"exemplo-troubleshooting.html"
 }
 ]
+
