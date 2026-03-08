@@ -1,8 +1,11 @@
 fetch("articles.json")
+
 .then(r=>r.json())
+
 .then(data=>{
 
 window.articles=data
+
 buildMenu(data)
 
 })
@@ -10,63 +13,67 @@ buildMenu(data)
 function buildMenu(data){
 
 let menu=document.getElementById("menu")
+
 menu.innerHTML=""
 
-let tree={}
+let categories={}
 
 data.forEach(a=>{
 
-if(!tree[a.category]) tree[a.category]={}
+if(!categories[a.category]){
 
-if(!tree[a.category][a.subcategory]) tree[a.category][a.subcategory]=[]
+categories[a.category]={}
 
-tree[a.category][a.subcategory].push(a)
+}
+
+if(!categories[a.category][a.subcategory]){
+
+categories[a.category][a.subcategory]=[]
+
+}
+
+categories[a.category][a.subcategory].push(a)
 
 })
 
-for(let cat in tree){
+for(let cat in categories){
 
 let catDiv=document.createElement("div")
-catDiv.className="tree-category"
-catDiv.innerHTML="▶ "+cat
+
+catDiv.innerHTML="<b>"+cat+"</b>"
+
+catDiv.className="menu-category"
 
 let subContainer=document.createElement("div")
-subContainer.className="tree-sub"
+
+subContainer.style.display="none"
 
 catDiv.onclick=()=>{
 
 subContainer.style.display=
-subContainer.style.display==="none"?"block":"none"
+subContainer.style.display=="none"?"block":"none"
 
 }
 
 menu.appendChild(catDiv)
-menu.appendChild(subContainer)
 
-for(let sub in tree[cat]){
+for(let sub in categories[cat]){
 
 let subDiv=document.createElement("div")
-subDiv.className="tree-subcategory"
-subDiv.innerHTML="▶ "+sub
+
+subDiv.innerHTML=sub
+
+subDiv.className="menu-sub"
 
 let artContainer=document.createElement("div")
-artContainer.className="tree-articles"
 
-subDiv.onclick=()=>{
-
-artContainer.style.display=
-artContainer.style.display==="none"?"block":"none"
-
-}
-
-subContainer.appendChild(subDiv)
-subContainer.appendChild(artContainer)
-
-tree[cat][sub].forEach(a=>{
+categories[cat][sub].forEach(a=>{
 
 let art=document.createElement("div")
-art.className="tree-article"
+
 art.innerText=a.title
+
+art.className="menu-article"
 
 art.onclick=()=>showArticle(a)
 
@@ -74,7 +81,13 @@ artContainer.appendChild(art)
 
 })
 
+subContainer.appendChild(subDiv)
+
+subContainer.appendChild(artContainer)
+
 }
+
+menu.appendChild(subContainer)
 
 }
 
@@ -82,26 +95,43 @@ artContainer.appendChild(art)
 
 function showArticle(a){
 
-document.getElementById("breadcrumbs").innerHTML=
-
-`<span>${a.category}</span> › <span>${a.subcategory}</span> › <b>${a.title}</b>`
-
 let html=""
 
 html+=`<h2>${a.title}</h2>`
+
 html+=`<p><b>Problem:</b> ${a.problem}</p>`
 
 html+="<h3>Symptoms</h3>"
-a.symptoms.forEach(s=>html+=`<li>${s}</li>`)
+
+a.symptoms.forEach(s=>{
+
+html+=`<li>${s}</li>`
+
+})
 
 html+="<h3>Diagnostics</h3>"
-a.diagnostics.forEach(d=>html+=`<li>${d}</li>`)
+
+a.diagnostics.forEach(d=>{
+
+html+=`<li>${d}</li>`
+
+})
 
 html+="<h3>Resolution</h3>"
-a.resolution.forEach(r=>html+=`<li>${r}</li>`)
+
+a.resolution.forEach(r=>{
+
+html+=`<li>${r}</li>`
+
+})
 
 html+="<h3>Tags</h3>"
-a.tags.forEach(t=>html+=`<span class="tag">${t}</span>`)
+
+a.tags.forEach(t=>{
+
+html+=`<span class="tag">${t}</span>`
+
+})
 
 if(a.images){
 
@@ -134,20 +164,12 @@ document.getElementById("article").innerHTML=html
 function openImage(src){
 
 let overlay=document.createElement("div")
+
 overlay.className="image-overlay"
 
-overlay.innerHTML=`
+overlay.innerHTML=`<img src="${src}" class="fullscreen">`
 
-<div class="image-box">
-
-<button class="close-btn">X</button>
-
-<img src="${src}" class="fullscreen">
-
-</div>
-`
-
-overlay.querySelector(".close-btn").onclick=()=>overlay.remove()
+overlay.onclick=()=>overlay.remove()
 
 document.body.appendChild(overlay)
 
