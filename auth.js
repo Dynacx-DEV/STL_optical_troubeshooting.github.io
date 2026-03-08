@@ -14,7 +14,7 @@ console.log("login ok")
 localStorage.setItem("sessionUser",u)
 localStorage.setItem("sessionRole",user.role)
 
-window.location="dashboard.html"
+window.location.href="./dashboard.html"
 
 }else{
 
