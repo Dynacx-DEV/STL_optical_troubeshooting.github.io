@@ -8,8 +8,9 @@ let f=input.value.toLowerCase()
 
 document.querySelectorAll(".sidebar a").forEach(a=>{
 
-a.style.display=
-a.innerText.toLowerCase().includes(f)?"block":"none"
+a.style.display =
+a.innerText.toLowerCase().includes(f)
+? "block" : "none"
 
 })
 
