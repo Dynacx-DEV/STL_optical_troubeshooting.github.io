@@ -48,9 +48,9 @@
 "problem":"center dot",
 
 "symptoms":[
-"Interface down",
-"SFP not present message",
-"Port LED off"
+"teton",
+"center mark"
+
 ],
 
 "diagnostics":[
@@ -78,10 +78,11 @@
 "cosmetic_2.jpg"
 ],
 
-"diagrams":[
+"images":[
 "cosmetc_3.jpg"
 ]
 
 }
 ]
+
 
