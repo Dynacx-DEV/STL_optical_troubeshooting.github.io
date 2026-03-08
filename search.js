@@ -1,19 +1,31 @@
 document.getElementById("search")
-
 .addEventListener("keyup",function(){
 
 let term=this.value.toLowerCase()
 
-let filtered=articles.filter(a=>
+if(term.length<2){
 
-a.title.toLowerCase().includes(term) ||
+buildMenu(articles)
+return
 
-a.category.toLowerCase().includes(term) ||
+}
 
-a.tags.join(" ").toLowerCase().includes(term)
+let results=articles.filter(a=>{
 
-)
+let text=""
 
-buildMenu(filtered)
+text+=a.title+" "
+text+=a.problem+" "
+
+text+=a.tags.join(" ")+" "
+text+=a.symptoms.join(" ")+" "
+text+=a.diagnostics.join(" ")+" "
+text+=a.resolution.join(" ")
+
+return text.toLowerCase().includes(term)
+
+})
+
+buildMenu(results)
 
 })
