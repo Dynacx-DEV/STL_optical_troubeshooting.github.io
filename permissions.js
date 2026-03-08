@@ -18,9 +18,8 @@ let role = localStorage.getItem("sessionRole")
 
 if(role !== "admin"){
 
-let adminItems = document.querySelectorAll(".admin")
-
-adminItems.forEach(x => x.style.display = "none")
+document.querySelectorAll(".admin")
+.forEach(x => x.style.display="none")
 
 }
 
