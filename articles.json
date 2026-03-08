@@ -1,0 +1,12 @@
+[
+{
+"title":"Bem vindo",
+"category":"Geral",
+"file":"pages/welcome.html"
+},
+{
+"title":"Falha de comunicação PLC",
+"category":"Automação",
+"file":"pages/exemplo-troubleshooting.html"
+}
+]
