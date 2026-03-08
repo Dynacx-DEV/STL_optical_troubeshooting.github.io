@@ -1,24 +1,20 @@
 function login(){
 
-console.log("botão clicado")
+let user = document.getElementById("user").value
+let pass = document.getElementById("pass").value
 
-let u = document.getElementById("user").value
-let p = document.getElementById("pass").value
+let found = USERS.find(u =>
+u.username === user && u.password === pass
+)
 
-let user = USERS.find(x => x.username === u && x.password === p)
+if(found){
 
-if(user){
+localStorage.setItem("sessionUser",user)
+localStorage.setItem("sessionRole",found.role)
 
-console.log("login ok")
-
-localStorage.setItem("sessionUser",u)
-localStorage.setItem("sessionRole",user.role)
-
-window.location.href="./dashboard.html"
+window.location.href="dashboard.html"
 
 }else{
-
-console.log("login falhou")
 
 document.getElementById("msg").innerText="Login inválido"
 
