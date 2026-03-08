@@ -1,4 +1,4 @@
-const USERS = [
+const USERS=[
 
 {
 username:"admin",
@@ -7,13 +7,15 @@ role:"admin"
 },
 
 {
+username:"editor",
+password:"editor123",
+role:"editor"
+},
+
+{
 username:"reader",
 password:"reader123",
-role:"viewer"
+role:"reader"
 }
 
 ]
-
-
-
-
