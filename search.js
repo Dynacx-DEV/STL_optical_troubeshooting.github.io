@@ -4,20 +4,16 @@ document.getElementById("search")
 
 let term=this.value.toLowerCase()
 
-let items=document.querySelectorAll("#menu div")
+let filtered=articles.filter(a=>
 
-items.forEach(i=>{
+a.title.toLowerCase().includes(term) ||
 
-if(i.innerText.toLowerCase().includes(term)){
+a.category.toLowerCase().includes(term) ||
 
-i.style.display="block"
+a.tags.join(" ").toLowerCase().includes(term)
 
-}else{
+)
 
-i.style.display="none"
-
-}
-
-})
+buildMenu(filtered)
 
 })
