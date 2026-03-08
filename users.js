@@ -2,7 +2,7 @@ let USERS = JSON.parse(localStorage.getItem("USERS")) || [
 
 {
 username:"jose",
-password:"6f4b6612125fb3a0da0b7a9e2f2f2d44",
+password:"jose123",
 role:"admin"
 },
 
@@ -13,3 +13,4 @@ role:"viewer"
 }
 
 ]
+
