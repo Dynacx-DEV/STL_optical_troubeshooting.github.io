@@ -1,59 +1,90 @@
-/* BREADCRUMBS */
+body{
 
-#breadcrumbs{
-
-font-size:14px;
-color:#888;
-margin-bottom:10px;
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
 
 }
 
-/* TREE MENU */
+.layout{
 
-.tree-category{
+display:flex;
+height:100vh;
 
+}
+
+.sidebar{
+
+width:260px;
+background:#1e1e1e;
+color:white;
+padding:20px;
+overflow:auto;
+
+}
+
+.content{
+
+flex:1;
+background:white;
+padding:40px;
+overflow:auto;
+
+}
+
+input{
+
+padding:8px;
+width:90%;
+margin-bottom:15px;
+
+}
+
+button{
+
+padding:8px 15px;
+
+}
+
+.menu-category{
+
+margin-top:10px;
 cursor:pointer;
 font-weight:bold;
-margin-top:8px;
 
 }
 
-.tree-sub{
+.menu-sub{
 
-margin-left:10px;
-display:none;
-
-}
-
-.tree-subcategory{
-
-cursor:pointer;
 margin-left:10px;
 font-style:italic;
+margin-top:5px;
 
 }
 
-.tree-articles{
+.menu-article{
 
 margin-left:20px;
-display:none;
-
-}
-
-.tree-article{
-
 cursor:pointer;
 padding:3px;
 
 }
 
-.tree-article:hover{
+.menu-article:hover{
 
 background:#333;
 
 }
 
-/* IMAGE THUMB */
+.tag{
+
+background:#ddd;
+padding:4px 6px;
+margin-right:5px;
+border-radius:4px;
+font-size:12px;
+
+}
 
 .thumb{
 
@@ -71,8 +102,6 @@ transform:scale(1.05);
 
 }
 
-/* IMAGE MODAL */
-
 .image-overlay{
 
 position:fixed;
@@ -84,36 +113,12 @@ background:rgba(0,0,0,0.8);
 display:flex;
 align-items:center;
 justify-content:center;
-z-index:1000;
-
-}
-
-.image-box{
-
-position:relative;
 
 }
 
 .fullscreen{
 
-max-width:90vw;
-max-height:90vh;
-
-}
-
-/* CLOSE BUTTON */
-
-.close-btn{
-
-position:absolute;
-top:-10px;
-right:-10px;
-background:red;
-color:white;
-border:none;
-padding:8px 12px;
-cursor:pointer;
-font-size:16px;
-border-radius:50%;
+max-width:90%;
+max-height:90%;
 
 }
