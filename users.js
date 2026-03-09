@@ -1,8 +1,8 @@
 const USERS=[
 
 {
-username:"admin",
-password:"admin@1974",
+username:"administrador",
+password:"admin@1",
 role:"admin"
 },
 
@@ -13,10 +13,17 @@ role:"editor"
 },
 
 {
+username:"admin",
+password:"sdmin@1974",
+role:"reader"
+},
+  
+{
 username:"jose.goes",
 password:"read_1245",
 role:"reader"
 }
 
 ]
+
 
