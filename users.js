@@ -14,7 +14,7 @@ role:"editor"
 
 {
 username:"admin",
-password:"sdmin@1974",
+password:"admin@1974",
 role:"reader"
 },
   
@@ -25,5 +25,6 @@ role:"reader"
 }
 
 ]
+
 
 
